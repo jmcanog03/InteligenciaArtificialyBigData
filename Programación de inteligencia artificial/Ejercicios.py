@@ -94,10 +94,6 @@ for n in lista:
 
 """
 
-
-"""
-
-
 import random
 
 numero = random.randint(1,100)
@@ -115,4 +111,85 @@ while fin == False:
         print('El numero es mas pequeño')
     else:
         print(' El numero es mas grande')
+
+"""
+
+"""
+def areaTriangulo():
+    base = int(input('Introduce la base del triangulo: '))
+    altura = int(input('Introduce la altura del triangulo: '))
+    return base*altura/2
+
+
+print(int(areaTriangulo()))
+"""
+
+
+"""
+
+def conversionGrados():
+    celsius = int(input('Introduce los grados celsius: '))
+    return celsius*9/5+32
+
+
+print('\nLos grados farenheint son: ', int(conversionGrados()))
+"""
+
+
+
+
+# Escribe una función que determine si una palabra es un palíndromo (simétrica)
+
+
+
+"""
+def esPalindromo():
+    palabra = input('Introduce la palabra para ver si es polindromo: ')
+    for i in range(len(palabra)//2):
+        if palabra[i] != palabra[len(palabra)-1 -i]:
+            return False
+        
+    return True
+
+        
+
+
+if esPalindromo() == True:
+    print('Es palindromo')
+else:
+    print('No es polindromo')
+"""
+
+# Factorial
+"""
+def calcularFactorial(n):
+   f = 1
+   for i in range(2,n+1):
+        f *= i
+   return f
+
+print(calcularFactorial(5))
+"""
+
+"""
+def factorialRec(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n*factorialRec(n-1)
+
+
+
+print(factorialRec(5))
+"""
+
+
+def mostrarRec(pal, index):
+    if index != len(pal):
+        print(pal[index], end="")
+        mostrarRec(pal, index + 1)
+
+
+
+print(mostrarRec('Carlos',0))
 
