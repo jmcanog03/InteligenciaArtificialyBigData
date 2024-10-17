@@ -183,7 +183,7 @@ def factorialRec(n):
 print(factorialRec(5))
 """
 
-
+"""
 def mostrarRec(pal, index):
     if index != len(pal):
         print(pal[index], end="")
@@ -192,4 +192,82 @@ def mostrarRec(pal, index):
 
 
 print(mostrarRec('Carlos',0))
+"""
 
+
+        
+"""
+class Persona:
+    def __init__(self, nombre, edad, direccion):
+        self.nombre = nombre
+        self.edad = edad
+        self.direccion = direccion
+
+
+p = Persona('Carlos', 28, 'Calle Miguel de Cervantes nº31')
+
+print(p.edad)
+        
+"""
+
+#Crea una clase llamada "Rectángulo" con atributos para el ancho y el alto. Agrega métodos para calcular el área y el perímetro del rectángulo
+
+
+
+"""
+class Rectangulo:
+    def __init__(self, alto, ancho):
+        self.alto = alto
+        self.ancho = ancho
+    
+    def calcularArea(self):
+        return self.alto*self.ancho
+    
+    def calcularPerimetro(self):
+        return self.alto*2 + self.ancho*2
+
+
+r = Rectangulo(10,4)
+
+print(f'El área del rectangulo es {r.calcularArea()} y el perímetro es {r.calcularPerimetro()}')
+"""
+
+
+class Contacto:
+    def __init__(self, nombre, telefono, direccion, correo):
+        self.nombre = nombre
+        self.telefono = telefono
+        self.direccion = direccion
+        self.correo = correo
+    
+    def __str__(self):
+        return f'Me llamo {self.nombre}, mi telefono es {self.telefono}'
+
+
+def buscarContacto(lista):
+    l = list(lista)
+
+    for Contacto in lista:
+        if Contacto.nombre == 'María':
+            print(Contacto)
+
+    
+
+
+
+
+agenda = [
+    Contacto('Josema', 600332454, 'Miguel de Cervantes', 'josema@gmail.com'),
+    Contacto('Ana', 610123456, 'Calle Mayor', 'ana@hotmail.com'),
+    Contacto('Luis', 620987654, 'Avenida del Sol', 'luis@gmail.com'),
+    Contacto('María', 630555111, 'Plaza de España', 'maria@yahoo.com'),
+    Contacto('Carlos', 640222333, 'Calle Luna', 'carlos@gmail.com'),
+    Contacto('Elena', 650444555, 'Avenida del Parque', 'elena@hotmail.com'),
+    Contacto('Pedro', 660666777, 'Calle Las Flores', 'pedro@gmail.com'),
+    Contacto('Laura', 670888999, 'Paseo del Río', 'laura@yahoo.com'),
+    Contacto('Javier', 680111222, 'Calle del Olmo', 'javier@gmail.com'),
+    Contacto('Carmen', 690333444, 'Calle del Prado', 'carmen@hotmail.com')
+]
+
+
+buscarContacto(agenda)
